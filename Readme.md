@@ -61,9 +61,9 @@ Register a New User
   "email": "johndoe@example.com",
   "password": "securepassword"
   }
-  for admin user
+  
 
-  - Body:{
+  - for admin user Body:{
     "name": "John Doe",
     "email": "johndoe@example.com",
     "password": "securepassword"
