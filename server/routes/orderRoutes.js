@@ -1,6 +1,7 @@
 const express = require("express");
 const {
   createOrder,
+  getLastOrder,
   getUserOrders,
   cancelOrder,
   updateOrderStatus,
