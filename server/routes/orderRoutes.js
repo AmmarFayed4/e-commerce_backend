@@ -12,6 +12,7 @@ const { protect, admin } = require("../middleware/authMiddleware");
 const router = express.Router();
 
 router.post("/", protect, createOrder); // Create an order
+router.get("/lastest",protect,getLastOrder)// Get lastes Order
 router.get("/", protect, getUserOrders); // Get all user orders
 router.put("/cancel/:id", protect, cancelOrder); // Cancel an order (User-only)
 router.post("/confirm", protect, confirmPayment);
