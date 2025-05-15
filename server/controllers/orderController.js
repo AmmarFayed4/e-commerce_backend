@@ -50,6 +50,29 @@ const createOrder = async (req, res) => {
     res.status(500).json({ message: error.message });
   }
 };
+// Get Order
+// const getCurrentOrder = async (req, res) => {
+//   try {
+//     const orderId = req.params.id;
+//     const order = await Order.findOne({ _id: orderId }).populate(
+//       "items.product"
+//     );
+//     res.json(order);
+//   } catch (error) {
+//     res.status.json({ massage: error.massage });
+//   }
+// };
+
+//Get lastest Order
+const getLastOrder = async (req, res) => {
+  try {
+    const lastOrder = await Order.findOne().sort({ createdAt: -1 });
+
+    res.json(lastOrder);
+  } catch (error) {
+    res.status(500).json({ massage: error.massage });
+  }
+};
 
 // Get all user orders
 const getUserOrders = async (req, res) => {
