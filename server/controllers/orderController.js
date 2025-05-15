@@ -170,6 +170,7 @@ const updateOrderStatus = async (req, res) => {
 
 module.exports = {
   createOrder,
+  getLastOrder,
   getUserOrders,
   cancelOrder,
   updateOrderStatus,
